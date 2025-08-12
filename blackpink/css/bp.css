@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #333;
+}
+
+.header {
+    background-color: #1c1c1e; /* BLACKPINK pink */
+    color: #ff2dab;
+    font-family: sans-serif,'poppins';
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeInDown 2s ease-in-out;
+}
+
+a{
+    color: #1f292c;
+    text-decoration: none;
+    font-size: x-large;
+
+}
+.main{
+    color: #fff;
+    font-family:'Times New Roman', Times, serif;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 1.2em;
+}
+.link{
+    color: #ddd;
+    font-size: medium;
+}
+
+.members-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.member-box {
+    background-color: #ff7ecb;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.member-box:hover {
+    transform: scale(1.05);
+}
+
+.member-img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    color: #000000;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animated-button {
+    background-color: #6c5757;  /* Blue background */
+    border: 2px solid #4c6269;  /* Blue border */
+    color: white;               /* White text */
+    padding: 14px 28px;         /* Padding */
+    font-size: 16px;            /* Font size */
+    cursor: pointer;            /* Pointer on hover */
+    border-radius: 10px;        /* Rounded corners */
+    position: relative;         /* Position for overlay */
+    overflow: hidden;           /* Hidden overflow for animation */
+    z-index: 1;                 /* Control stacking order */
+}
+
+.animated-button::before {
+    content: '';
+    background: #ef1d7c;        /* Lighter blue for animation */
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    transition: all 0.4s;       /* Smooth transition */
+    z-index: -1;                /* Behind the button text */
+}
+
+.animated-button:hover::before {
+    left: 0;                    /* Slide in animation */
+}
+
+.animated-button:hover {
+    color: #fff;                /* Keep text white */
+    border: 2px solid #000000;  /* Change border color */
+}
+
